@@ -3,11 +3,11 @@ import CoachCard from "@/components/CoachCard";
 
 const coaches = [
   {
-    name: "Rahul Sharma",
-    role: "Head Coach",
+    name: "Satish Bachala",
+    role: "Head Coach & Founder",
     specialization: "Strength & Power",
     experience: "12+ Years",
-    image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=500&q=80",
+    image: "https://images.unsplash.com/photo-1583500178450-e59f4edce10b?w=500&q=80",
   },
   {
     name: "Priya Reddy",

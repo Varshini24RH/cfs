@@ -110,8 +110,64 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Meet the Founder */}
       <section className="py-20 md:py-28 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-accent font-semibold tracking-[0.15em] uppercase text-sm mb-3">
+                The Man Behind CFS9
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase mb-6">
+                Meet <span className="text-accent">Satish Bachala</span>
+              </h2>
+              <div className="space-y-4 text-muted leading-relaxed">
+                <p>
+                  CFS9 was founded by Satish Bachala — a national-level powerlifter
+                  and dedicated bodybuilder who turned his passion for iron into
+                  Hyderabad&apos;s premier fitness destination.
+                </p>
+                <p>
+                  With 12+ years of coaching experience, CSCS and IFBB certifications,
+                  and over 1000 athletes trained, Satish leads by example — both on
+                  the competition stage and on the gym floor.
+                </p>
+              </div>
+              <div className="mt-6">
+                <Button href="/founder" arrow>
+                  His Full Story
+                </Button>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative h-[260px] rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1583500178450-e59f4edce10b?w=600&q=80"
+                  alt="Satish Bachala — bodybuilder posing"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="relative h-[260px] rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=600&q=80"
+                  alt="Satish Bachala — training"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="relative h-[260px] rounded-lg overflow-hidden col-span-2">
+                <img
+                  src="https://images.unsplash.com/photo-1534368786749-b63e05c92717?w=800&q=80"
+                  alt="Satish Bachala — gym lifestyle"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-accent font-semibold tracking-[0.15em] uppercase text-sm mb-3">

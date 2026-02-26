@@ -5,12 +5,19 @@ import { Metadata } from "next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-const categories = ["All", "Training", "Equipment", "Community", "Events"] as const;
+const categories = ["All", "Founder", "Training", "Equipment", "Community", "Events"] as const;
 
 const images = [
+  // Founder — Satish Bachala bodybuilder photos
+  { src: "https://images.unsplash.com/photo-1583500178450-e59f4edce10b?w=800&q=80", alt: "Satish Bachala — competition posing", category: "Founder" },
+  { src: "https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=800&q=80", alt: "Satish Bachala — heavy deadlift", category: "Founder" },
+  { src: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80", alt: "Satish Bachala — physique posing", category: "Founder" },
+  { src: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80", alt: "Satish Bachala — barbell training", category: "Founder" },
+  { src: "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?w=800&q=80", alt: "Satish Bachala — muscle-up", category: "Founder" },
+  { src: "https://images.unsplash.com/photo-1534368786749-b63e05c92717?w=800&q=80", alt: "Satish Bachala — gym lifestyle", category: "Founder" },
+  // Training
   { src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80", alt: "Gym floor", category: "Equipment" },
   { src: "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=800&q=80", alt: "Strength training", category: "Training" },
-  { src: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80", alt: "Bodybuilding", category: "Training" },
   { src: "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&q=80", alt: "Gym interior", category: "Equipment" },
   { src: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80", alt: "CrossFit workout", category: "Training" },
   { src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80", alt: "Personal training", category: "Training" },

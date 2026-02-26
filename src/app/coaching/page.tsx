@@ -10,12 +10,13 @@ export const metadata: Metadata = {
 
 const coaches = [
   {
-    name: "Rahul Sharma",
+    name: "Satish Bachala",
     role: "Head Coach & Founder",
     specialization: "Strength & Powerlifting",
     experience: "12+ Years",
-    image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=500&q=80",
-    bio: "National-level powerlifter turned coach. Rahul founded CFS9 with a mission to bring world-class strength training to Hyderabad. He's coached 200+ athletes to competition-level strength.",
+    image: "https://images.unsplash.com/photo-1583500178450-e59f4edce10b?w=500&q=80",
+    bio: "National-level powerlifter and dedicated bodybuilder turned coach. Satish founded CFS9 with a mission to bring world-class strength training to Hyderabad. He's coached 200+ athletes to competition-level strength.",
+    isFounder: true,
   },
   {
     name: "Priya Reddy",
@@ -87,7 +88,13 @@ export default function CoachingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {coaches.map((coach, index) => (
-              <div key={coach.name} className="flex flex-col">
+              <div key={coach.name} className="flex flex-col relative">
+                {"isFounder" in coach && coach.isFounder && (
+                  <div className="absolute top-3 right-3 z-30 bg-primary text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-lg"
+                    style={{ fontFamily: "var(--font-oswald)" }}>
+                    ★ Founder
+                  </div>
+                )}
                 <CoachCard {...coach} index={index} />
                 <p className="text-muted text-sm mt-4 leading-relaxed px-1">
                   {coach.bio}

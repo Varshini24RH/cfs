@@ -4,6 +4,7 @@ import { Dumbbell, Instagram, Facebook, Youtube, MapPin, Phone, Mail, Clock } fr
 const quickLinks = [
   { href: "/programs", label: "Programs" },
   { href: "/coaching", label: "Coaching" },
+  { href: "/founder", label: "Founder" },
   { href: "/about", label: "About Us" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },

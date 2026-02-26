@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Dumbbell } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,6 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { href: "/programs", label: "PROGRAMS" },
   { href: "/coaching", label: "COACHING" },
+  { href: "/founder", label: "FOUNDER" },
+  { href: "/branches", label: "BRANCHES" },
+];
+
+const allLinks = [
+  { href: "/programs", label: "PROGRAMS" },
+  { href: "/coaching", label: "COACHING" },
+  { href: "/founder", label: "FOUNDER" },
   { href: "/about", label: "ABOUT" },
   { href: "/branches", label: "BRANCHES" },
   { href: "/gallery", label: "GALLERY" },
@@ -15,66 +23,55 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/90 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4">
+      <nav className="max-w-7xl mx-auto bg-white/[0.06] backdrop-blur-2xl backdrop-saturate-150 rounded-2xl border border-white/[0.10] shadow-2xl shadow-black/30">
+        <div className="flex items-center justify-between h-16 px-5 sm:px-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Dumbbell className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform duration-300" />
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+            <Dumbbell className="w-7 h-7 text-primary group-hover:rotate-12 transition-transform duration-300" />
             <span
-              className="text-2xl font-bold tracking-wider text-white"
+              className="text-xl font-bold tracking-widest text-white"
               style={{ fontFamily: "var(--font-oswald)" }}
             >
               CFS9
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation — positioned after logo */}
+          <div className="hidden lg:flex items-center gap-7 ml-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium tracking-widest text-gray-300 hover:text-white transition-colors duration-200 relative group"
+                className="text-[13px] font-medium tracking-[0.15em] text-gray-400 hover:text-white transition-colors duration-200"
                 style={{ fontFamily: "var(--font-oswald)" }}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
 
-          {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          {/* Spacer */}
+          <div className="hidden lg:block flex-1" />
+
+          {/* Right side: JOIN NOW + Mobile Toggle */}
+          <div className="flex items-center gap-3 sm:gap-5">
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center px-6 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-bold tracking-widest rounded transition-all duration-200 hover:scale-105"
+              className="hidden sm:inline-flex items-center px-5 py-2 bg-primary hover:bg-primary-dark text-white text-[13px] font-bold tracking-[0.15em] rounded-lg transition-all duration-200 hover:scale-105"
               style={{ fontFamily: "var(--font-oswald)" }}
             >
               JOIN NOW
             </Link>
             <button
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-white p-1.5"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -84,31 +81,34 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-black/95 backdrop-blur-md border-t border-border overflow-hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden mt-2 mx-auto max-w-7xl bg-white/[0.06] backdrop-blur-2xl backdrop-saturate-150 rounded-2xl border border-white/[0.10] shadow-2xl shadow-black/30 overflow-hidden"
           >
-            <div className="px-4 py-6 space-y-4">
-              {navLinks.map((link) => (
+            <div className="px-6 py-5 space-y-3">
+              {allLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-lg font-medium tracking-widest text-gray-300 hover:text-primary transition-colors py-2"
+                  className="block text-base font-medium tracking-[0.15em] text-gray-400 hover:text-white transition-colors py-2"
                   style={{ fontFamily: "var(--font-oswald)" }}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setMobileOpen(false)}
-                className="block w-full text-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold tracking-widest rounded transition-colors mt-4"
-                style={{ fontFamily: "var(--font-oswald)" }}
-              >
-                JOIN NOW
-              </Link>
+              <div className="pt-3 border-t border-white/10">
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="block text-center px-5 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-bold tracking-[0.15em] rounded-lg transition-colors"
+                  style={{ fontFamily: "var(--font-oswald)" }}
+                >
+                  JOIN NOW
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

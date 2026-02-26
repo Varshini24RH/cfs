@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Play, Users } from "lucide-react";
+import { Dumbbell } from "lucide-react";
 import Button from "@/components/Button";
 
 export default function HeroSection() {
@@ -10,17 +10,17 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80"
-        alt="CFS9 Gym Interior"
+        src="/barbell.png"
+        alt="CFS9 Gym — Weight Plates"
         fill
-        className="object-cover opacity-30"
+        className="object-cover"
         priority
         sizes="100vw"
       />
 
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 z-10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 z-10" />
+      {/* Gradient Overlays — lighter to keep image visible like reference */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 z-10" />
 
       {/* Content */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 text-center">
@@ -29,14 +29,22 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Main Title */}
-          <h1
-            className="text-7xl sm:text-8xl md:text-9xl font-bold text-white leading-none tracking-tight"
+          {/* Welcome Tag */}
+          <p
+            className="text-sm sm:text-base tracking-[0.3em] uppercase text-primary font-medium mb-4"
             style={{ fontFamily: "var(--font-oswald)" }}
           >
-            CFS9
+            Welcome to CFS
+          </p>
+
+          {/* Main Title */}
+          <h1
+            className="text-5xl sm:text-7xl md:text-8xl font-bold text-white leading-[0.95] tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.6)]"
+            style={{ fontFamily: "var(--font-oswald)" }}
+          >
+            Stronger Every Day
           </h1>
-          <div className="mt-2 mx-auto w-24 h-1 bg-primary rounded-full" />
+          <div className="mt-4 mx-auto w-28 h-1 bg-primary rounded-full" />
         </motion.div>
 
         <motion.p
@@ -45,9 +53,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-8 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
         >
-          Precision coaching for the elite physique.{" "}
-          <span className="text-white font-semibold">Enter the station</span>{" "}
-          and sculpt your legacy with iron and will.
+          CFS9 – Where Fitness Meets Luxury.{" "}
+          Every workout here is more than just exercise — it&apos;s a step toward a{" "}
+          <span className="text-white font-semibold">stronger, sharper, and more confident you</span>.{" "}
+          Train with purpose, recover with care, and live the lifestyle you deserve.
         </motion.p>
 
         {/* CTAs */}
@@ -58,61 +67,16 @@ export default function HeroSection() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button href="/contact" variant="primary" size="lg" arrow>
-            Start Transformation
+            Start Your Journey
           </Button>
-          <Button href="/gallery" variant="outline" size="lg">
-            <Play className="w-4 h-4 mr-1" />
-            Watch Trailer
+          <Button href="/about" variant="outline" size="lg">
+            <Dumbbell className="w-4 h-4 mr-1" />
+            Workout
           </Button>
-        </motion.div>
-
-        {/* Social Proof */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-14 flex items-center justify-center gap-4"
-        >
-          {/* Avatar Stack */}
-          <div className="flex -space-x-3">
-            {[
-              "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=80&h=80&fit=crop&crop=face",
-              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
-              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
-            ].map((src, i) => (
-              <Image
-                key={i}
-                src={src}
-                alt="Member"
-                width={40}
-                height={40}
-                className="rounded-full border-2 border-background object-cover"
-              />
-            ))}
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold border-2 border-background">
-              500
-            </div>
-          </div>
-          <div className="text-left">
-            <div className="flex items-center gap-1.5 text-white text-sm font-bold">
-              <Users className="w-4 h-4 text-primary" />
-              ELITE ATHLETES
-            </div>
-            <p className="text-muted text-xs">Forged in the last year</p>
-          </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-      >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-primary rounded-full" />
-        </div>
-      </motion.div>
+
     </section>
   );
 }
