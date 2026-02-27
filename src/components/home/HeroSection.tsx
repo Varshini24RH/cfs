@@ -11,7 +11,7 @@ const HERO_SLIDES = [
   { src: "/barbell.png",            top: "FORGE YOUR",   bottom: "STRENGTH" },
   { src: "/@12340691a-Edit.jpg",    top: "TRAIN LIKE A", bottom: "CHAMPION" },
   { src: "/@12340679a-Edit.jpg",    top: "UNLEASH YOUR", bottom: "POWER" },
-  { src: "/@12340630a-Edit.jpg",    top: "BUILD YOUR",   bottom: "LEGACY" },
+  { src: "/@12340762a-Edit.jpg",    top: "BUILD YOUR",   bottom: "LEGACY" },
 ];
 
 /* ── Animated counting number ── */
@@ -84,7 +84,7 @@ export default function HeroSection() {
   const slide = HERO_SLIDES[current];
 
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden -mt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* ── Background image carousel with Ken Burns zoom ── */}
       <AnimatePresence mode="popLayout">
         <motion.img
@@ -102,8 +102,11 @@ export default function HeroSection() {
         />
       </AnimatePresence>
 
+      {/* ── Top fade into navbar ── */}
+      <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-background via-background/70 to-transparent z-[2] pointer-events-none" />
+
       {/* ── Dark overlays ── */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/85 z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/85 z-[2]" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50 z-[2]" />
 
       {/* ── Diagonal red accent stripe ── */}
@@ -114,7 +117,7 @@ export default function HeroSection() {
       <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-[100px] z-[3] animate-float" style={{ animationDelay: "2s" }} />
 
       {/* ── Content ── */}
-      <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 w-full">
+      <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 w-full pt-28">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
 
           {/* Badge */}

@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${oswald.variable} ${inter.variable} antialiased bg-background text-foreground`}>
         <Navbar />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
         {/* JSON-LD Structured Data */}
         <script
