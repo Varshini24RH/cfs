@@ -6,11 +6,22 @@ import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [whatsappBranch, setWhatsappBranch] = useState<"kondapur" | "madhapur" | "">("");
+
+  const whatsappNumber = "918886564999";
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // In production, connect to a backend/email service
     setSubmitted(true);
+  };
+
+  const handleWhatsAppChat = () => {
+    if (!whatsappBranch) return;
+
+    const branchLabel = whatsappBranch === "kondapur" ? "CFS9 Kondapur" : "CFS9 Madhapur";
+    const message = encodeURIComponent(`Hi! I want to enquire about ${branchLabel}.`);
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -35,24 +46,27 @@ export default function ContactPage() {
             Get In <span className="text-accent">Touch</span>
           </h1>
           <div className="mx-auto w-28 h-1 bg-primary rounded-full mb-6" />
-          <button 
-            onClick={() => document.querySelector('main')?.children[1]?.scrollIntoView({ behavior: 'smooth' })}
-            className="mt-6 inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
-            aria-label="Scroll down"
-          >
-            <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </button>
-          <a
-            href="https://wa.me/918886564999"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-sm tracking-widest rounded-lg transition-all duration-200 hover:scale-105"
-            style={{ fontFamily: "var(--font-oswald)" }}
-          >
-            💬 CHAT WITH US ON WHATSAPP
-          </a>
+          <div id="whatsapp-chat" className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <select
+              value={whatsappBranch}
+              onChange={(e) => setWhatsappBranch(e.target.value as "kondapur" | "madhapur" | "")}
+              className="w-full sm:w-auto min-w-[220px] px-4 py-4 bg-surface border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent transition-colors"
+              aria-label="Select WhatsApp branch"
+            >
+              <option value="">Select branch</option>
+              <option value="kondapur">CFS9 Kondapur</option>
+              <option value="madhapur">CFS9 Madhapur</option>
+            </select>
+            <button
+              type="button"
+              onClick={handleWhatsAppChat}
+              disabled={!whatsappBranch}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary-dark disabled:bg-primary/50 disabled:cursor-not-allowed text-white font-bold text-sm tracking-widest rounded-lg transition-all duration-200 hover:scale-105 disabled:hover:scale-100"
+              style={{ fontFamily: "var(--font-oswald)" }}
+            >
+              💬 CHAT WITH US ON WHATSAPP
+            </button>
+          </div>
         </div>
       </section>
 

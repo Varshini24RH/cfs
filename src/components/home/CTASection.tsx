@@ -48,7 +48,7 @@ export default function CTASection() {
           transition={{ delay: 0.3 }}
           className="flex items-center justify-center"
         >
-          <Button href="https://wa.me/918886564999" size="lg" arrow>
+          <Button href="/contact#whatsapp-chat" size="lg" arrow>
             Chat with us on WhatsApp
           </Button>
         </motion.div>

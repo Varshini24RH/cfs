@@ -143,7 +143,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 1.0 }}
             className="mt-8 flex flex-col sm:flex-row items-center lg:items-start gap-4"
           >
-            <Button href="https://wa.me/918886564999" variant="primary" size="lg" arrow className="animate-pulse-glow">
+            <Button href="/contact#whatsapp-chat" variant="primary" size="lg" arrow className="animate-pulse-glow">
               Start Training Today
             </Button>
             <Button href="/programs" variant="outline" size="lg" arrow>
