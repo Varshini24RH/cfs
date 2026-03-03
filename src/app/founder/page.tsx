@@ -309,21 +309,14 @@ export default function FounderPage() {
               {...fadeUp}
               className="flex items-center justify-center"
             >
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                <div className="absolute inset-0 bg-primary/10 rounded-full animate-pulse-glow" />
-                <div className="absolute inset-4 bg-[var(--color-surface)] rounded-full flex items-center justify-center border border-[var(--color-border)]">
-                  <div className="text-center">
-                    <p
-                      className="text-4xl md:text-5xl font-bold text-primary"
-                      style={{ fontFamily: "var(--font-oswald)" }}
-                    >
-                      CFS9
-                    </p>
-                    <p className="text-[var(--color-muted)] text-xs tracking-[0.2em] uppercase mt-1">
-                      Gym
-                    </p>
-                  </div>
-                </div>
+              <div className="relative w-full max-w-md h-[380px] rounded-2xl overflow-hidden border border-white/10">
+                <Image
+                  src="/owner.jpg"
+                  alt="Satish Bachala — vision behind CFS9"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
               </div>
             </motion.div>
 

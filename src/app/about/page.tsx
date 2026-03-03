@@ -183,7 +183,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-[260px] rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1583500178450-e59f4edce10b?w=600&q=80"
+                  src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80"
                   alt="Satish Bachala — bodybuilder posing"
                   className="w-full h-full object-cover"
                 />
@@ -197,7 +197,7 @@ export default function AboutPage() {
               </div>
               <div className="relative h-[260px] rounded-lg overflow-hidden col-span-2">
                 <img
-                  src="https://images.unsplash.com/photo-1534368786749-b63e05c92717?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80"
                   alt="Satish Bachala — gym lifestyle"
                   className="w-full h-full object-cover"
                 />

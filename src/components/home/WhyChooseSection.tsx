@@ -189,7 +189,7 @@ export default function WhyChooseSection() {
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               className="text-muted text-lg leading-relaxed"
             >
-              We don't just offer a gym — we offer a complete transformation
+              We don&apos;t just offer a gym — we offer a complete transformation
               experience, backed by certified coaches and a results-first
               culture.
             </motion.p>

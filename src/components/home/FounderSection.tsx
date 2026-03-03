@@ -26,7 +26,7 @@ export default function FounderSection() {
           >
             <div className="relative h-[520px] rounded-2xl overflow-hidden border border-white/10">
               <Image
-                src="https://images.unsplash.com/photo-1583500178450-e59f4edce10b?w=800&q=80"
+                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80"
                 alt="Satish Bachala — Founder of CFS9"
                 fill
                 className="object-cover object-top"

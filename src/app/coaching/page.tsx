@@ -35,7 +35,7 @@ const coaches = [
     role: "Fitness Trainer — Level 2",
     specialization: "Injury Rehab & Exercise Correction",
     experience: "4+ Years",
-    image: "https://images.unsplash.com/photo-1609899517237-354fba8d18c5?w=500&q=80",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&q=80",
     bio: "BFY Certified Trainer with expertise in exercise correction, special populations, and rehabilitation. Mahender brings structured programming for clients managing diabetics, thyroid, PCOD, and obesity.",
   },
   {

@@ -28,7 +28,7 @@ const coaches = [
     role: "Fitness Trainer",
     specialization: "Injury Rehab & Exercise Correction",
     experience: "4+ Years",
-    image: "https://images.unsplash.com/photo-1609899517237-354fba8d18c5?w=500&q=80",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&q=80",
   },
   {
     name: "Ajay",
