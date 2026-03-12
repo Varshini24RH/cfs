@@ -233,7 +233,7 @@ export default function ContactPage() {
                 <div className="space-y-3 text-muted text-sm">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Plot 42, Botanical Garden Road, Kondapur, Hyderabad 500084</span>
+                    <span>Jaswitha Construction, Madhava Hills Estates, Kondapur, Hyderabad 500084</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-accent flex-shrink-0" />
@@ -256,7 +256,7 @@ export default function ContactPage() {
                 <div className="space-y-3 text-muted text-sm">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Durgam Cheruvu Road, Near Inorbit Mall, Madhapur, Hyderabad 500081</span>
+                    <span>Pardha's Picasa, Durgam Cheruvu Road, Kavuri Hills, Madhapur, Hyderabad 500018</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-accent flex-shrink-0" />

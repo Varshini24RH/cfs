@@ -101,7 +101,7 @@ export default function RootLayout({
               address: [
                 {
                   "@type": "PostalAddress",
-                  streetAddress: "Kondapur Main Road",
+                  streetAddress: "3rd Floor, Jaswitha Construction, Madhava Hills Estates",
                   addressLocality: "Kondapur",
                   addressRegion: "Telangana",
                   postalCode: "500084",
@@ -109,10 +109,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "PostalAddress",
-                  streetAddress: "Madhapur Hi-Tech City Road",
+                  streetAddress: "3rd Floor, Pardha's Picasa, Durgam Cheruvu Road, above Vijetha Super Market, D Block, Kavuri Hills",
                   addressLocality: "Madhapur",
                   addressRegion: "Telangana",
-                  postalCode: "500081",
+                  postalCode: "500018",
                   addressCountry: "IN",
                 },
               ],

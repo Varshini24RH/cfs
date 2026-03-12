@@ -86,7 +86,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-muted">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span>Plot 42, Botanical Garden Road, Kondapur, Hyderabad 500084</span>
+                <span>Jaswitha Construction, Madhava Hills Estates, Kondapur, Hyderabad 500084</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
@@ -112,7 +112,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-muted">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span>Durgam Cheruvu Road, Near Inorbit Mall, Madhapur, Hyderabad 500081</span>
+                <span>Pardha's Picasa, Durgam Cheruvu Road, Kavuri Hills, Madhapur, Hyderabad 500018</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary shrink-0" />

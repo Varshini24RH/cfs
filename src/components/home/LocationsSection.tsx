@@ -8,7 +8,7 @@ import Link from "next/link";
 const locations = [
   {
     name: "CFS9 Madhapur",
-    address: "Durgam Cheruvu Road, Near Inorbit Mall, Madhapur, Hyderabad 500081",
+    address: "Pardha's Picasa, Durgam Cheruvu Road, Kavuri Hills, Madhapur, Hyderabad 500018",
     phone: "+91 90522 88888",
     hours: "5:00 AM – 10:00 PM",
     comingSoon: false,
@@ -17,7 +17,7 @@ const locations = [
   },
   {
     name: "CFS9 Kondapur",
-    address: "Plot 42, Botanical Garden Road, Kondapur, Hyderabad 500084",
+    address: "Jaswitha Construction, Madhava Hills Estates, Kondapur, Hyderabad 500084",
     phone: "+91 88865 64999",
     hours: "5:00 AM – 10:00 PM",
     comingSoon: false,
