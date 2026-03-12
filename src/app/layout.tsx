@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { siteConfig, shouldIndex } from "@/lib/seo";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -20,35 +21,58 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cfs9.vercel.app"),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "CFS9 — Central Fitness Station | Premium Gym in Hyderabad",
     template: "%s | CFS9 — Central Fitness Station",
   },
-  description:
-    "CFS9 — Central Fitness Station. Premium gym with world-class equipment, expert coaches, and personalized training programs. Branches in Kondapur & Madhapur, Hyderabad.",
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "CFS9", "Central Fitness Station", "gym Hyderabad", "gym Kondapur",
     "gym Madhapur", "fitness center", "bodybuilding", "personal training",
     "strength training", "best gym Hyderabad",
   ],
   authors: [{ name: "CFS9 — Central Fitness Station" }],
+  creator: "CFS9 — Central Fitness Station",
+  publisher: "CFS9 — Central Fitness Station",
   openGraph: {
     type: "website",
-    locale: "en_IN",
-    url: "https://cfs9.vercel.app",
-    siteName: "CFS9 — Central Fitness Station",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.shortName,
     title: "CFS9 — Central Fitness Station | Premium Gym in Hyderabad",
-    description:
-      "Premium gym with world-class equipment, expert coaches, and personalized training programs in Kondapur & Madhapur, Hyderabad.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "CFS9 Gym" }],
+    description: siteConfig.description,
+    images: [{ url: siteConfig.defaultOgImage, width: 1200, height: 630, alt: "CFS9 Gym" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "CFS9 — Central Fitness Station",
     description: "Premium gym in Kondapur & Madhapur, Hyderabad.",
+    images: [siteConfig.defaultOgImage],
   },
-  robots: { index: true, follow: true },
+  robots: shouldIndex
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
+      }
+    : {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
 };
 
 export default function RootLayout({
@@ -87,7 +111,7 @@ export default function RootLayout({
                   "@type": "PostalAddress",
                   streetAddress: "Madhapur Hi-Tech City Road",
                   addressLocality: "Madhapur",
-                  addressRegion: "Telangana",
+                  url: siteConfig.url,
                   postalCode: "500081",
                   addressCountry: "IN",
                 },
@@ -99,7 +123,7 @@ export default function RootLayout({
                 closes: "22:00",
               },
               priceRange: "$$",
-              image: "/og-image.jpg",
+              image: new URL(siteConfig.defaultOgImage, siteConfig.url).toString(),
               sameAs: [
                 "https://www.instagram.com/cfs9_gym_madhapur/",
                 "https://facebook.com/cfs9gym",

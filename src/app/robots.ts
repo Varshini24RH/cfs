@@ -1,11 +1,18 @@
 import type { MetadataRoute } from "next";
+import { siteConfig, shouldIndex } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: "https://cfs9gym.com/sitemap.xml",
+    rules: shouldIndex
+      ? {
+          userAgent: "*",
+          allow: "/",
+        }
+      : {
+          userAgent: "*",
+          disallow: "/",
+        },
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+    host: siteConfig.url,
   };
 }
