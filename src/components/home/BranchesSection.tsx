@@ -8,7 +8,7 @@ const branches = [
     phone: "+91 88865 64999",
     hours: "5:00 AM – 10:00 PM (Mon – Sat) | 6:00 AM – 10:00 AM (Sun)",
     image: "/stock/1534438327276-14e5300c3a48.jpg",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=CFS9%20Kondapur%2C%20Plot%2042%2C%20Botanical%20Garden%20Road%2C%20Kondapur%2C%20Hyderabad%20500084",
+    mapUrl: "https://maps.app.goo.gl/57UHLe19jvK1wUCVA",
   },
   {
     name: "CFS9 Madhapur",
@@ -16,7 +16,7 @@ const branches = [
     phone: "+91 90522 88888",
     hours: "5:00 AM – 10:00 PM (Mon – Sat) | 6:00 AM – 10:00 AM (Sun)",
     image: "/stock/1570829460005-c840387bb1ca.jpg",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=CFS9%20Madhapur%2C%20Durgam%20Cheruvu%20Road%2C%20Near%20Inorbit%20Mall%2C%20Madhapur%2C%20Hyderabad%20500081",
+    mapUrl: "https://maps.app.goo.gl/agDzKuR5PmB8VKCS9",
   },
 ];
 
