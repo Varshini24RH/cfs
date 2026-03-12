@@ -7,9 +7,9 @@ const branches = [
     name: "CFS9 Kondapur",
     address: "Plot 42, Botanical Garden Road, Kondapur, Hyderabad 500084",
     phone: "+91 88865 64999",
-    hours: "5:00 AM – 11:00 PM (Mon – Sat) | 6:00 AM – 10:00 AM (Sun)",
+    hours: "5:00 AM – 10:00 PM (Mon – Sat) | 6:00 AM – 10:00 AM (Sun)",
     image: "/stock/1534438327276-14e5300c3a48.jpg",
-    mapUrl: "https://maps.google.com/?q=Kondapur+Hyderabad",
+    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=17.469632,78.348501",
     features: [
       "8,000+ sq ft training area",
       "Dedicated CrossFit zone",
@@ -24,9 +24,9 @@ const branches = [
     name: "CFS9 Madhapur",
     address: "Durgam Cheruvu Road, Near Inorbit Mall, Madhapur, Hyderabad 500081",
     phone: "+91 90522 88888",
-    hours: "5:00 AM – 11:00 PM (Mon – Sat) | 6:00 AM – 10:00 AM (Sun)",
+    hours: "5:00 AM – 10:00 PM (Mon – Sat) | 6:00 AM – 10:00 AM (Sun)",
     image: "/stock/1570829460005-c840387bb1ca.jpg",
-    mapUrl: "https://maps.google.com/?q=Madhapur+Hyderabad",
+    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=17.440223,78.389892",
     features: [
       "10,000+ sq ft premium facility",
       "Functional training area",
@@ -116,9 +116,7 @@ export default function BranchesPage() {
             ) : (
               <div
                 key={branch.name}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-start ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start"
               >
                 <div className={`relative h-[350px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <Image

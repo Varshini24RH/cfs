@@ -7,6 +7,13 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Contact CFS9 for memberships, free trials, program enquiries, and branch details for Kondapur and Madhapur in Hyderabad.",
   path: "/contact",
+  keywords: [
+    "contact CFS9",
+    "gym membership Hyderabad",
+    "free gym trial Hyderabad",
+    "CFS9 phone number",
+    "join CFS9 gym",
+  ],
 });
 
 export default function ContactLayout({ children }: { children: ReactNode }) {

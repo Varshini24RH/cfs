@@ -243,7 +243,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-start gap-3">
                     <Clock className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>5 AM – 11 PM (Mon–Sat) · 6 AM – 10 AM (Sun)</span>
+                    <span>5 AM – 10 PM (Mon–Sat) · 6 AM – 10 AM (Sun)</span>
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-start gap-3">
                     <Clock className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>5 AM – 11 PM (Mon–Sat) · 6 AM – 10 AM (Sun)</span>
+                    <span>5 AM – 10 PM (Mon–Sat) · 6 AM – 10 AM (Sun)</span>
                   </div>
                 </div>
               </div>
@@ -288,13 +288,19 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-heading text-lg font-bold uppercase mb-3">Follow Us</h3>
                 <div className="flex flex-wrap gap-3">
-                  {["Instagram", "Facebook", "YouTube"].map((platform) => (
+                  {[
+                    { label: "Instagram", href: "https://www.instagram.com/cfs9_gym_madhapur/" },
+                    { label: "Facebook", href: "https://facebook.com/cfs9gym" },
+                    { label: "YouTube", href: "https://youtube.com/@cfs9gym" },
+                  ].map((social) => (
                     <a
-                      key={platform}
-                      href="#"
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 bg-surface border border-white/10 rounded-lg text-sm font-medium text-muted hover:text-accent hover:border-accent/30 transition-colors"
                     >
-                      {platform}
+                      {social.label}
                     </a>
                   ))}
                 </div>

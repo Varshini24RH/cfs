@@ -18,6 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: new URL(route, siteConfig.url).toString(),
     lastModified,
     changeFrequency: route === "/" || route === "/gallery" ? "weekly" : route === "/contact" ? "yearly" : "monthly",
-    priority: route === "/" ? 1 : route === "/contact" ? 0.9 : route === "/about" || route === "/gallery" ? 0.7 : 0.8,
+    priority: route === "/" ? 1 : route === "/programs" || route === "/coaching" ? 0.9 : route === "/branches" || route === "/founder" ? 0.8 : route === "/about" || route === "/gallery" ? 0.7 : 0.5,
   }));
 }

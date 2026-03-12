@@ -7,6 +7,13 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Learn how CFS9 grew into a results-driven premium gym in Hyderabad, built around expert coaching, elite equipment, and a strong fitness community.",
   path: "/about",
+  keywords: [
+    "about CFS9",
+    "CFS9 gym story",
+    "premium gym Hyderabad",
+    "fitness community Hyderabad",
+    "CFS9 values",
+  ],
 });
 
 export default function AboutLayout({ children }: { children: ReactNode }) {

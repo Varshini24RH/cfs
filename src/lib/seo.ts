@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "CFS9 — Central Fitness Station",
   description:
     "Premium gym in Hyderabad with expert coaches, world-class equipment, and personalized fitness programs across Kondapur and Madhapur.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://cfs9gym.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.cfs9gym.com",
   locale: "en_IN",
   defaultOgImage: "/opengraph-image",
 } as const;

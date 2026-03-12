@@ -9,7 +9,6 @@ const images = [
   // Founder — Satish Bachala bodybuilder photos
   { src: "/stock/1583454110551-21f2fa2afe61.jpg", alt: "Satish Bachala — competition posing", category: "Founder" },
   { src: "/stock/1605296867424-35fc25c9212a.jpg", alt: "Satish Bachala — heavy deadlift", category: "Founder" },
-  { src: "/stock/1583454110551-21f2fa2afe61.jpg", alt: "Satish Bachala — physique posing", category: "Founder" },
   { src: "/stock/1581009146145-b5ef050c2e1e.jpg", alt: "Satish Bachala — barbell training", category: "Founder" },
   { src: "/stock/1532029837206-abbe2b7620e3.jpg", alt: "Satish Bachala — muscle-up", category: "Founder" },
   { src: "/stock/1541534741688-6078c6bfb5c5.jpg", alt: "Satish Bachala — gym lifestyle", category: "Founder" },

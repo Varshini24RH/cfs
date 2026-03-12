@@ -7,6 +7,15 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Explore CFS9 fitness programs including strength training, bodybuilding, CrossFit, HIIT, personal training, yoga, and nutrition coaching.",
   path: "/programs",
+  keywords: [
+    "gym programs Hyderabad",
+    "strength training program",
+    "bodybuilding Hyderabad",
+    "CrossFit Hyderabad",
+    "HIIT training",
+    "personal training program",
+    "yoga classes Hyderabad",
+  ],
 });
 
 export default function ProgramsLayout({ children }: { children: ReactNode }) {

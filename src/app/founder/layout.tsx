@@ -7,6 +7,13 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Read the story of Satish Bachala, founder of CFS9, and his journey building a premium fitness brand in Hyderabad.",
   path: "/founder",
+  keywords: [
+    "Satish Bachala",
+    "CFS9 founder",
+    "fitness entrepreneur Hyderabad",
+    "celebrity trainer Hyderabad",
+    "CFS9 gym owner",
+  ],
 });
 
 export default function FounderLayout({ children }: { children: ReactNode }) {

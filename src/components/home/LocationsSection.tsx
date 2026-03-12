@@ -10,17 +10,19 @@ const locations = [
     name: "CFS9 Madhapur",
     address: "Durgam Cheruvu Road, Near Inorbit Mall, Madhapur, Hyderabad 500081",
     phone: "+91 90522 88888",
-    hours: "5:00 AM – 11:00 PM",
+    hours: "5:00 AM – 10:00 PM",
     comingSoon: false,
     image: "/stock/1534438327276-14e5300c3a48.jpg",
+    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=17.440223,78.389892",
   },
   {
     name: "CFS9 Kondapur",
     address: "Plot 42, Botanical Garden Road, Kondapur, Hyderabad 500084",
     phone: "+91 88865 64999",
-    hours: "5:00 AM – 11:00 PM",
+    hours: "5:00 AM – 10:00 PM",
     comingSoon: false,
     image: "/stock/1540497077202-7c8a3999166f.jpg",
+    mapUrl: "https://www.google.com/maps/dir/?api=1&destination=17.469632,78.348501",
   },
   {
     name: "CFS9 Jubilee Hills",
@@ -29,6 +31,7 @@ const locations = [
     hours: null,
     comingSoon: true,
     image: "/stock/1571902943202-507ec2618e8f.jpg",
+    mapUrl: null,
   },
 ];
 
@@ -135,6 +138,17 @@ export default function LocationsSection() {
                     </div>
                   )}
                 </div>
+
+                {loc.mapUrl && (
+                  <a
+                    href={loc.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:underline mt-1"
+                  >
+                    Get Directions <ArrowRight className="w-4 h-4" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

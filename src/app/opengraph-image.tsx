@@ -200,7 +200,7 @@ export default function OpenGraphImage() {
                 color: "#f5f5f5",
               }}
             >
-              cfs9gym.com
+              www.cfs9gym.com
             </div>
 
             <div

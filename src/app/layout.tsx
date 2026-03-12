@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CFS9 — Central Fitness Station",
-    description: "Premium gym in Kondapur & Madhapur, Hyderabad.",
+    title: "CFS9 — Central Fitness Station | Premium Gym in Hyderabad",
+    description: siteConfig.description,
     images: [siteConfig.defaultOgImage],
   },
   robots: shouldIndex
@@ -81,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body className={`${oswald.variable} ${inter.variable} antialiased bg-background text-foreground`}>
         <Navbar />
         <main>{children}</main>
@@ -116,6 +116,22 @@ export default function RootLayout({
                   addressCountry: "IN",
                 },
               ],
+              geo: [
+                {
+                  "@type": "GeoCoordinates",
+                  latitude: 17.469632,
+                  longitude: 78.348501,
+                },
+                {
+                  "@type": "GeoCoordinates",
+                  latitude: 17.440223,
+                  longitude: 78.389892,
+                },
+              ],
+              areaServed: {
+                "@type": "City",
+                name: "Hyderabad",
+              },
               openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
                 dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
